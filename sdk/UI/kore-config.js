@@ -28,7 +28,7 @@ function generateUniqueToken() {
 
     var botOptions = {};
     botOptions.logLevel = 'debug';
-    botOptions.koreAPIUrl = "https://bots.kore.ai/api/";
+    botOptions.koreAPIUrl = "https://demo-bots.kore.ai/api/";
     botOptions.koreSpeechAPIUrl = "";//deprecated
     //botOptions.bearer = "bearer xyz-------------------";
     //botOptions.ttsSocketUrl = '';//deprecated
@@ -38,8 +38,8 @@ function generateUniqueToken() {
         delivery: false
     }
 
-    // botOptions.JWTUrl = "http://localhost:3000/api/users/sts";
-    botOptions.JWTUrl = "http://54.173.49.28:3000/api/users/sts";
+    botOptions.JWTUrl = "http://localhost:3000/api/users/sts";
+    // botOptions.JWTUrl = "http://:3000/api/users/sts";
     botOptions.userIdentity = UserToken;// Provide users email id here
     botOptions.botInfo = { name: "Demo Travel Bot", "_id":"st-b8d47915-4361-58e7-9934-99c47a8c91f9" }; // bot name is case sensitive
     botOptions.botInfo.customData = {Token:UserToken};
