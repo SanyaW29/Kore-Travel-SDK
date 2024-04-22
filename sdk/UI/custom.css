@@ -1,0 +1,194 @@
+/* body Inner Body */
+.kore-chat-window .kore-chat-body {
+    background-image: url(./assets/img/background.png) !important;
+    background-size: cover;
+}
+
+.kore-chat-window .kore-chat-header .header-title {
+    width: fit-content !important;
+}
+
+/* -----------chatwindow header section--------------- */
+.kore-chat-window .kore-chat-header {
+    position: absolute;
+    z-index: 1000;
+    background-color: #006c82 !important;
+    border-radius: 10px 10px 0 0 !important;
+    background-size: contain !important;
+}
+
+/* -----------chatwindow Footer section--------------- */
+.kore-chat-window .kore-chat-footer {
+    background-color: #006c82 !important;
+    padding: 0px !important;
+    border-radius: 0 0 10px 10px !important;
+    color: white !important;
+}
+
+
+
+/* -----------Message Date--------------- */
+.kore-chat-window ul.chat-container li .extra-info {
+    color: rgb(0, 0, 0) !important;
+}
+
+
+
+.kore-chat-window ul.chat-container li .profile-photo .user-account {
+    border-radius: 100px !important;
+}
+
+
+/* -----------chatwindow bottom layer body--------------- */
+.kore-chat-window {
+    background-color: rgba(255, 255, 255, 0) !important;
+    border-radius: 10px !important;
+    border-color: transparent !important;
+}
+
+/* --------------open button color----------------- */
+.kore-chat-window.minimize .minimized {
+    background-color: #0da4ad !important;
+    padding: 10px !important;
+}
+
+/* -----------Title while hover chat icon--------------- */
+.kore-chat-window.minimize .minimized-title {
+    background-color: #0da4ad !important;
+    color: white !important;
+}
+
+
+.chatSendMsg {
+    color: white !important;
+}
+
+
+.kore-chat-window ul.chat-container li.fromOtherUsers .messageBubble {
+    border-radius: 12px 12px 12px 0px !important;
+}
+
+/* -------------------user message------------- */
+.kore-chat-window ul.chat-container li.fromCurrentUser .messageBubble {
+    background-color: #4B48FC !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+
+}
+
+
+/* ---------------upper icon color change invert(1) = white,invert(0) = black-------------- */
+button.reload-btn img,
+button.minimize-btn img,
+button.expand-btn img,
+button.close-btn img {
+    filter: brightness(0) invert(1) !important;
+}
+
+
+/* ---------------bottom icon color change invert(1) = white,invert(0) = black-------------- */
+.paperclip,
+.ttsSpeakerDisable,
+.microphone {
+    filter: brightness(0) invert(1) !important;
+    margin: 0 5px !important;
+}
+
+
+/* quick reply buttom on same component */
+.kore-chat-window .buttonTmplContent .buttonTmplContentChild .quickReply {
+    background-color: #4B48FC !important;
+    border-color: transparent !important;
+}
+
+.kore-chat-window .buttonTmplContent .buttonTmplContentChild .quickReply:hover {
+    background-color: #003F44 !important;
+}
+
+#menutrigger {
+    filter: brightness(0) invert(1) !important;
+    width: 15px;
+    position: relative !important;
+    margin-top: 17px;
+}
+
+#boxcontent {
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute !important;
+    z-index: 1000;
+    right: 0;
+    margin: 10px 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+#boxcontent.active {
+    display: block !important;
+}
+
+
+.kore-chat-window .kore-chat-footer .chatInputBox {
+    width: 100% !important; 
+    margin: 0 !important;
+    padding: 0px !important;
+}
+
+#maininputbox{
+    margin: 10px 20px;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.35) !important;
+    padding: 5px 10px;
+    backdrop-filter: blur(12.5px) !important;
+    -webkit-backdrop-filter: blur(12.5px) !important;
+    border-radius: 5px !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.kore-chat-window .kore-chat-body ul.chat-container {
+    bottom: 30px !important;
+}
+
+button.expand-btn,
+.minimize-btn {
+    border-color: transparent !important;
+    margin: 5px 0px;
+}
+
+.reload-btn button {
+    cursor: pointer;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+#btncontol{
+    height: fit-content;
+    padding: 0px 30px !important;
+}
+
+#btncontol:hover{
+    background-color: #1a717e;
+    color: white !important;
+}
+
+#btncontol:hover h5{
+    color: white !important;
+}
+
+#btncontol:hover a img{
+    filter: brightness(0) invert(1) !important;
+}
+
+
+
+#leftcontrol {
+    display: flex;
+    margin-right: 10px;
+}
+
+
+.kore-chat-window.minimize{
+    opacity: 0%;
+    pointer-events: none;
+}

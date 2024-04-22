@@ -1,0 +1,392 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Login */
+  #MLogin{
+    margin-top: 6%;
+    background-color: #009DAB;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    gap: 20px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  #Musername,#Mpassword{
+    padding: 5px 20px;
+    border-radius: 5px;
+    border-color: transparent;
+  }
+  
+  #btn5{
+    background-color: white;
+    color: #00B8D4;
+    width: 200px;
+  }
+  
+  /* Upper Navbar Styles */
+  #upper-navbar {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #upper-navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #upper-navbar a:hover {
+    text-decoration: underline;
+  }
+
+  #phrase{
+    margin-left: 4%;
+    font-size: 75%;
+  }
+  
+  #phoneNum{
+    margin-right: 4%;
+    font-size: 75%;
+  }
+
+  /* Middle Navbar Styles */
+#middle-navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+  }
+  
+  #middle-navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+  }
+
+  #mid-nav-options{
+    margin-left: 3%;
+  }
+  
+  #login-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  #login-section input {
+    padding: 5px;
+    margin-left: 1%;
+  }
+  
+  #login-button {
+    background-color: #009DAB;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: -18%;
+  }
+  
+  #login-button:hover {
+    background-color: #00B8D4;
+  }
+
+  #login-section-name{
+    display: none;
+  }
+
+  /* Lower Navbar Styles */
+  #lower-navbar {
+    background-color: #009DAB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+  }
+  
+  #lower-navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+  }
+  
+  #lower-navbar a:hover {
+    background-color: #00B8D4;
+  }
+  
+  #travel-now-button {
+    background-color: white;
+    color: #009DAB;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #travel-now-button:hover {
+    background-color: #aee2ea;
+  }
+
+  #title{
+    margin-left: 4%;
+    font-size: 105%;
+    color: white;
+    font-weight: 600;
+  }
+  #lower-nav-options{
+    margin-right: 3.5%;
+  }
+
+  #profile-button {
+    background-color: white;
+    color: #009DAB;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+/* Body */
+/* First Main Image */
+#mainimg {
+    width: 90vw;
+    height: 430px;
+    margin-top: 2%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#title1 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 4%;
+    margin-bottom: 1%;
+}
+
+#under {
+    text-decoration: underline;
+    text-decoration-color: #009DAB;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+}
+
+#icon {
+    width: 50px;
+    filter: brightness(0) invert(0) !important;
+    fill: #000000 !important;
+}
+
+
+#icon1 {
+    margin: 10px 8px;
+    width: 20px;
+    filter: brightness(0) invert(0) !important;
+    fill: #000000 !important;
+}
+
+#cMain1:hover #icon1 {
+    margin: 10px 8px;
+    width: 20px;
+    filter: brightness(0) invert(1) !important;
+}
+
+
+#cardMain {
+    color:black;
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: 150%;
+}
+
+#cardMain2 {
+    color: black;
+    width: 50%;
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+
+#cardMain2 h5 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#cardMain:hover {
+    color: black;
+    background-color: #66C4CD;
+}
+
+#cardMain h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#cardMain h5 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#cimg {
+    width: 100%;
+    height:55%;
+    border-radius: 10px;
+}
+#cimg1 {
+    width: 100%;
+    height: 190px;
+    border-radius: 10px;
+}
+
+#cMain {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+#cMain:hover {
+    background-color: #009DAB;
+    color: white !important;
+}
+
+#cMain:hover #btn{
+    background-color: #ffffff;
+    color: #009DAB !important;
+}
+
+#cMain1 {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 10px 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+#cMain1:hover {
+    background-color: #009DAB;
+    color: white !important;
+}
+
+#cMain1:hover #btn{
+    background-color: white;
+    color: #009DAB;
+}
+
+#cMain1 h4 {
+    margin: 5px 20px 0px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#cMain1 h5 {
+    font-size: 15px;
+    margin: 2px 20px 2px 10px;
+    font-weight: 300;
+}
+
+#cMain h4 {
+    margin: 20px 20px 0px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#cMain h5 {
+    font-size: 15px;
+    margin: 10px 20px 20px 20px;
+    font-weight: 300;
+}
+
+#navtext2 {
+    font-weight: 500;
+}
+
+#input {
+    margin-left: 5px;
+    padding: 5px 20px;
+}
+
+#btn {
+    background: #009DAB;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 5px;
+    border-color: none;
+}
+
+#btn:hover {
+    background: #66C4CD;
+}
+
+#btn1 {
+    background: #ffffff;
+    color: #000000;
+    padding: 5px 30px;
+    margin-right: 40PX;
+    border-radius: 5px;
+    border-color: none;
+}
+
+#btn1:hover {
+    background: #66C4CD;
+    color: WHITE;
+}
+
+#maincontact {
+    background-color: #ffffff;
+    padding: 0 5% 7% 5%;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#mainimg2 {
+
+    background: url(../img/12.jpg);
+    width: 90vw;
+    height: 400px;
+    margin-top: 30px;
+    background-color: #66C4CD;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin-right:4%;
+    margin-left: 4%;
+}
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: 80%;
+    border-radius: 7px;
+  }
+
+  .profile-dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }

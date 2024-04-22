@@ -1,0 +1,339 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=1.0">
+	<script src="libs/kore-no-conflict-start.js" type="text/javascript"></script>
+	<script src="libs/jquery.js" type="text/javascript"></script>
+	<script src="libs/jquery.tmpl.min.js" type="text/javascript"></script>
+	<script src="libs/jquery-ui.min.js" type="text/javascript"></script>
+	<link href="libs/jquery-ui.min.css" rel="stylesheet">
+	</link>
+	<script src="libs/moment.js" type="text/javascript"></script>
+	<script src="../libs/ie11CustomProperties.js"></script>
+	<script src="../libs/lodash.min.js"></script>
+	<script src="../libs/d3.v4.min.js"></script>
+	<script src="../libs/KoreGraphAdapter.js" type="text/javascript"></script>
+	<script src='../libs/anonymousassertion.js'></script>
+	<script src="../kore-bot-sdk-client.js"></script>
+	<script src="../libs/perfect-scrollbar.js" type="text/javascript"></script>
+	<title>Kore Travel Demo</title>
+	<link rel="shortcut icon" href="./images/fav.svg" type="image/x-icon">
+	<script src="chatWindow.js" type="text/javascript"></script>
+	<script src="libs/jquery.daterangepicker.js" type="text/javascript"></script>
+	<link href="libs/daterangepicker.css" rel="stylesheet">
+	</link>
+	<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+	<script src="libs/jquery-clockpicker.js" type="text/javascript"></script>
+	<link href="libs/jquery-clockpicker.css" rel="stylesheet">
+	</link>
+	<link href="../libs/kore-pickers.css" rel="stylesheet">
+	</link>
+	<script src="../libs/kore-pickers.js" type="text/javascript"></script>
+	<script src="../libs/emoji.js" type="text/javascript"></script>
+	<script src="../libs/recorder.js" type="text/javascript"></script>
+	<script src="../libs/recorderWorker.js" type="text/javascript"></script>
+	<script src="libs/dompurify.js" type="text/javascript"></script>
+	<link href="chatWindow.css" rel="stylesheet">
+	</link>
+	<link href="custom.css" rel="stylesheet">
+	</link>
+	<script src="./kore-custom-login-handler.js"></script>
+	<link href="../libs/emojione.sprites.css" rel="stylesheet">
+	</link>
+	<link href="../libs/purejscarousel.css" rel="stylesheet">
+	</link>
+	<script src="../libs/purejscarousel.js" type="text/javascript"></script>
+	<script src="custom/customTemplate.js" type="text/javascript"></script>
+	<link href="../libs/prefect-scrollbar.css" rel="stylesheet">
+	</link>
+	<link href="custom/customTemplate.css" rel="stylesheet">
+	</link>
+	<script src="kore-config.js" type="text/javascript"></script>
+	<script src="kore-main.js" type="text/javascript"></script>
+	<script src="libs/kore-no-conflict-end.js" type="text/javascript"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<style>
+		* {
+			font-family: 'Poppins', sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			margin: 0px;
+			padding: 0px;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Upper Navbar -->
+	<div id="LoginPage" style="display: flex;justify-content: center;">
+		<div>
+			<div id="MLogin" style="width:fit-content;width: 500px;">
+				<h2 style="text-align: center;margin: 20px 0px;color: white;">Demo Login</h2>
+				<input id="Musername" type="text" placeholder="Username">
+				<input id="Mpassword" type="password" placeholder="Password">
+				<div style="display: flex;justify-content: center;margin-top: 30px;">
+					<h5 id="btn5" onclick="PageSwitch()" style="text-align: center; padding: 2% 10px;border-radius: 5px;cursor: pointer;">Login
+					</h5>
+				</div>
+				<div id="warning" style="text-align: center;color: red;font-weight: 500;background-color: white;padding: 5px;display: none;">
+
+				</div>
+			</div>
+			<div
+				style="text-align:center;font-size:10px;font-weight:400;border-radius: 0 0 10px 10px !important;width: 600px;background:black;padding:10px;color: white;padding:10px 13px; margin-bottom: 6%;">
+				Powered by <img style="width:50px" src="./assets/img/logo1.png"> </div>
+		</div>
+	</div>
+	<div id="MainPage" style="display: none;">
+		 <!-- Upper Navbar -->
+		 <div id="upper-navbar">
+			<div id="phrase">
+			  Safe travels, savvy voyages. Learn to protect your journey. <a href="#" id="discover-more">Discover more.</a>
+			</div>
+			<div id="phoneNum">
+			  1-800-Kore-Travel
+			</div>
+		  </div>
+		
+		  <!-- Middle Navbar -->
+		<div id="middle-navbar" style="margin-left:5px;">
+			<div id="mid-nav-options">
+				<a href="#">Home</a>
+				<a href="#">Services</a>
+				<a href="#">About Us</a>
+				<a href="#">Contact Us</a>
+			</div>
+			<div style="margin-right: 4.5%;">
+				<div id="login-section" style="gap: 20px;">
+					<input id="username" type="text" placeholder="Username">
+					<input id="password" type="password" placeholder="Password">
+					<h5 id="btn" onclick="login()" style="text-align: center; padding: 2% 20px">Login
+					</h5>
+				</div>
+				<div id="login-section-name" style="text-align: center; padding: 2%;width: 100%;">
+				</div>
+			</div>
+		</div>
+		
+		  <!-- Lower Navbar -->
+		  <div id="lower-navbar">
+			<div id="title">
+			  Kore Travel
+			</div>
+			<div id="lower-nav-options">
+			  <a href="#">Destinations</a>
+			  <a href="#">Travel Packages</a>
+			  <a href="#">Accommodations</a>
+			  <a href="#">Travel Tips</a>
+			  <a href="#">Special Deals</a>
+			  <button id="travel-now-button" style="border-radius: 7px; padding: 10px 25px;">Travel Now</button>
+			</div> 
+			<!-- <div class="profile-dropdown">
+				 <img src="./assets/img/" alt="Profile Icon" id="profile-icon" onclick="toggleDropdown()" style="width: 5%;
+				margin-left: 91%;
+				margin-bottom: -1%;"> -->
+				<!-- <div class="dropdown-content" id="dropdown-content">
+					<a href="#" style="color:black">Profile</a>
+					<a href="#" style="color:black">Account</a>
+					<a href="#" style="color:black">Dashboard</a>
+					<a href="#" style="color:black">Logout</a>
+				</div> 
+		   </div> -->
+		  </div>
+		
+		  <!-- Body -->
+			<!-- First Main Image -->
+			<div style="display: flex; justify-content: center;">
+				<img id="mainimg" src="./assets/img/Main-BG.jpg" alt="First Img">
+			</div>
+			
+			<div style="margin-top: 4%; width: 100%;">
+				<!-- Card 1 start -->
+				<h4 id="title1"><span id="under">Year</span>-End Bonanza</h4>
+				<h2 style="font-weight: 300; margin-left: 4%;">Unwrap the Joy of Savings!</h2>
+				<div id="cardsection" style="margin-left: 4%; margin-right: 6%; margin-top: -2%; display: flex; gap: 20px; color: black; padding-top: 3%;">
+					<div id="cMain1">
+						<img src="./assets/img/13.jpg" alt="support" id="cimg1" />
+						<h4>Beach House  Package</h4>
+						<div style="display: flex;">
+							<img src="./assets/img/night.svg" alt="nighticon" id="icon1" />
+							<img src="./assets/img/dinner.svg" alt="dinnericon" id="icon1" />
+							<img src="./assets/img/location.svg" alt="locationicon" id="icon1" />
+						</div>
+						<h5 style="padding-bottom: 46px;">Package Price: $599 per person</h5>
+						<h5 id="btn" style="text-align: center; padding: 10px; margin-bottom: 0px;">View Package</h5>
+					</div>
+			
+					<div id="cMain1">
+						<img src="./assets/img/15.jpg" alt="support" id="cimg1" />
+						<h4>Peak Experience Package</h4>
+						<div style="display: flex;">
+							<img src="./assets/img/night.svg" alt="nighticon" id="icon1" />
+							<img src="./assets/img/dinner.svg" alt="dinnericon" id="icon1" />
+							<img src="./assets/img/location.svg" alt="locationicon" id="icon1" />
+						</div>
+						<h5 style="padding-bottom: 20px;">Package Price: $499 per person</h5>
+						<h5 id="btn" style="text-align: center; padding: 10px; margin-bottom: 0px;">View Package</h5>
+					</div>
+			
+					<div id="cMain1">
+						<img src="./assets/img/16.jpg" alt="support" id="cimg1" />
+						<h4>Serene Riverside Package</h4>
+						<div style="display: flex;">
+							<img src="./assets/img/night.svg" alt="nighticon" id="icon1" />
+							<img src="./assets/img/dinner.svg" alt="dinnericon" id="icon1" />
+							<img src="./assets/img/location.svg" alt="locationicon" id="icon1" />
+						</div>
+						<h5 style="padding-bottom: 20px;">Package Price: $399 per person</h5>
+						<h5 id="btn" style="text-align: center; padding: 10px; margin-bottom: 20px;">View Package</h5>
+					</div>
+			
+					<div id="cMain1">
+						<img src="./assets/img/17.jpg" alt="support" id="cimg1" />
+						<h4>Beach View Package</h4>
+						<div style="display: flex;">
+							<img src="./assets/img/night.svg" alt="nighticon" id="icon1" />
+							<img src="./assets/img/dinner.svg" alt="dinnericon" id="icon1" />
+							<img src="./assets/img/location.svg" alt="locationicon" id="icon1" />
+						</div>
+						<h5 style="padding-bottom: 46px;">Package Price: $899 per person</h5>
+						<h5 id="btn" style="text-align: center; padding: 10px; margin-bottom: 0px;">View Package</h5>
+					</div>
+			
+				</div>
+			</div>
+			<div style="margin-top: 4%;">
+				<!-- Card 2 start -->
+				<h4 id="title1"><span id="under">Our </span>Features</h4>
+				<h2 style="padding-top: 20px; font-weight: 300; margin-left: 4%; margin-top: -1.5%;">How can we help?</h2>
+				<div id="cardsection" style="display: flex; gap: 20px; color: white; padding-top: 3%; margin-left: 4%; margin-right: 4%; margin-top: -2%;">
+			
+					<div id="cardMain">
+						<img src="./assets/img/support.svg" alt="supporticon" id="icon" />
+						<h4>24/7 Customer Support</h4>
+						<h5>Access round-the-clock assistance to address any concerns or unexpected issues during your travels, providing peace of mind.</h5>
+					</div>
+			
+					<div id="cardMain">
+						<img src="./assets/img/Guidance.svg" alt="guidIcon" id="icon" />
+						<h4>Local Experiences</h4>
+						<h5>Immerse yourself in the culture of your destination with curated local experiences and recommendations, creating authentic and memorable travel moments. </h5>
+					</div>
+			
+					<div id="cardMain">
+						<img src="./assets/img/Alerts.svg" alt="alerticon" id="icon" />
+						<h4>Real-Time Updates</h4>
+						<h5>Stay informed with real-time updates on flight schedules, weather conditions, and travel advisories, allowing for seamless adjustments to your plans.</h5>
+					</div>
+				</div>
+			</div>
+			<div style="margin-top: 4%; width: 100%;">
+				<!-- Card 3 start -->
+				<h4 id="title1"><span id="under"> Dis</span>cover Your Perfect Haven</h4>
+				<h2 style="padding-top: 20px; font-weight: 300; margin-left: 4%;  margin-top:-1%;">Stay in Style, Explore with Comfort</h2>
+				<div id="cardsection" style="display: flex; gap: 20px; color: black; padding-top: 3%; margin-left: 4%; margin-right: 4%; margin-top: -2%;">
+			
+					<div id="cMain">
+						<img src="./assets/img/18.jpg" alt="support" id="cimg" />
+						<h4>The Royal Haven Luxury Hotel</h4>
+						<h5>Indulge in unparalleled luxury at The Royal Haven, where every detail is crafted to perfection.</h5>
+						<h5 id="btn" style="text-align: center; padding: 10px; margin-bottom: 10px;">Book Now</h5>
+					</div>
+			
+					<div id="cMain">
+						<img src="./assets/img/19.jpg" alt="support" id="cimg" />
+						<h4>The Velvet Haven Retreat</h4>
+						<h5>Indulge in the epitome of a luxurious experience and exclusivity at The Velvet Haven Retreat.</h5>
+						<h5 id="btn" style="text-align: center; padding: 10px; margin-top: 6%;margin-bottom: 10px;">Book Now</h5>
+					</div>
+			
+					<div id="cMain">
+						<img src="./assets/img/20.jpg" alt="support" id="cimg" />
+						<h4>Sunset Haven Resort & Spa</h4>
+						<h5>Nestled along the pristine shores of Serenity Bay, Sunset Haven Resort & Spa is a haven of luxury.</h5>
+						<h5 id="btn" style="text-align: center; padding: 10px; margin-bottom: 10px;">Book Now</h5>
+					</div>
+					
+				</div>
+				<div style="display: flex; justify-content: center;">
+					<h4 style="margin-top: 5%; text-align: center; width: 200px; padding: 20px 30px;" id="btn">View More</h4>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center; margin-right: 4%; margin-left:4%; margin-top: 4%;">
+				<!-- Card 3 start -->
+				<div style="background: #009DAB; display: flex; justify-content: space-between; width: 90vw; border-radius: 20px;">
+			
+					<div id="content1">
+						<h2 style="font-size: 30px; font-weight: 500; margin-left: 10%; color:white; margin-top: 4%; margin-bottom: 2%;">
+							Traveling
+						</h2>
+						<h4 style="font-size: 20px; font-weight: 300; width: 80%; margin-left: 10%; color:white; margin-top: -2%;">
+							it leaves you speechless, then turns you into a storyteller.
+						</h4>
+					</div>
+					
+					<img id="chatimg" src="./assets/img/travelicon.png" alt="chatbot" style="width: 12%; height: 71%; margin-top: 2%; margin-right: 10%;"/>
+				</div>
+			</div>
+			<div style="display: flex;">
+				<!-- Card 4 start -->
+				<div>
+					<h4 id="title1" style="margin-left: 10%; margin-top:10%;"><span id="under">Soar</span> to New Heights</h4>
+					<h2 style="padding-top: 20px; font-weight: 300; width: 79%; margin-left: 10%; margin-top: -2%;">
+						Embark on a seamless journey through the skies with our exceptional flight services. From swift check-ins to spacious cabins, let every mile be a testament to comfort and adventure. Elevate your travel experience with us and let the skies be your limitless horizon.
+					</h2>
+				</div>
+			
+				<img style="width: 43%; border-radius: 10px; margin-right: 4%; margin-top: 4%;" src="./assets/img/Card.jpg" alt="" />
+			</div>
+			
+			<!-- Card 5 start -->
+			<h4 id="title1" style="margin-top: 4%;"><span id="under">Our</span> Agency</h4>
+			<h2 style="padding-top: 20px; font-weight: 300; margin-left: 4%; margin-top: -1%; margin-right: 6%;">
+				At Wanderlust Ventures, we transform dreams into destinations. As your trusted travel agency, we curate bespoke experiences, ensuring every journey is a tale of discovery and delight. Let us be your compass, guiding you through a world of unforgettable adventures. Your voyage begins with us.
+			</h2>
+			
+			<div style="display: flex; justify-content: center; padding-bottom: 5%;">
+				<div id="mainimg2">
+				</div>
+			</div>
+		
+			<!-- Contact -->
+			<div style="display: flex; justify-content: center; background: #009DAB; margin-top: 0%; padding: 10% 0px;">
+				<div id='maincontact'>
+					<h1 style="text-align: center; margin: 5% 0px;">Contact Us</h1>
+					<div style="display: flex; gap: 20;">
+						<img style="width: 400px; border-radius: 10px;" src="./assets/img/Map.jpg" alt="Map" />
+						<div style="display: flex; flex-direction: column; margin-left: 50px; width: 600px;">
+							<input style="margin-top: 3%; width: 75%; height: 14%; margin-left: 12%;" type="text" id="outlined-basic" placeholder="Email" />
+							<input style="margin-top: 3%; width: 75%; height: 14%; margin-left: 12%;" type="text" id="outlined-basic" placeholder="Phone Number" />
+							<input style="margin-top: 3%; width: 75%; height: 14%; margin-left: 12%;" type="text" id="outlined-basic" placeholder="Message" />
+							<div style="display: flex; justify-content: center;">
+								<h4 style="margin-top: 10%; text-align: center; width: 100px; padding: 20px 20px;" id='btn'>Send</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="background: black; color: white; width: 100%; padding: 25px 0px; text-align: center;">
+			@All Rights Reserved By Kore Travel Demo
+		</div>
+
+		<div onclick="" id="kr_chatContainer">
+			<button class="openChatWindow">Open Chat Window</button>
+		</div>
+	</div>
+</body>
+
+</html>
