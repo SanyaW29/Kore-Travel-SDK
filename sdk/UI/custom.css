@@ -70,7 +70,7 @@
 
 /* -------------------user message------------- */
 .kore-chat-window ul.chat-container li.fromCurrentUser .messageBubble {
-    background-color: #4B48FC !important;
+    background-color: #d3d5d5 !important;
     font-size: 15px !important;
     font-weight: 400 !important;
 
@@ -142,7 +142,7 @@ button.close-btn img {
     padding: 5px 10px;
     backdrop-filter: blur(12.5px) !important;
     -webkit-backdrop-filter: blur(12.5px) !important;
-    border-radius: 5px !important;
+    border-radius: 25px !important;
     border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 
